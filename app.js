@@ -4,7 +4,7 @@ const search = document.querySelector("#input")
 const weather = document.querySelector("#api")
 
     const getWeather = async(search) => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${API_KEY}&units=metric`
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${API_KEY}&units=metric&lang=hi`
     const response = await fetch(url);
     const data = await response.json()
     console.log(data)
@@ -21,8 +21,10 @@ const showWeather = (data) => {
         <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="">
         </div>
         <div>
-            <h2 class="tempr">${data.main.temp} ℃</h2>
-            <h6> ${data.weather[0].main} </h6>
+            <h2 class="tempr">${data.main.temp} ℃ / ${data.name} </h2>
+            <h6"> ${data.weather[0].main}/${data.weather[0].description} </h6>
+            <h6> Humidity ${data.main.humidity} </h6>
+            <p> </p>
         </div>
     `
 }

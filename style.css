@@ -55,3 +55,8 @@ main{
     justify-content: center;
     align-items: center;
 }
+
+.sameline{
+    display: flex;
+    flex-direction: column;
+}
