@@ -17,14 +17,14 @@ const showWeather = (data) => {
         return;
     }
     weather.innerHTML = `
-        <div>
-        <img class="icons" src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="">
+        <div class="icons">
+        <img  src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="">
         </div>
         <div>
             <h2 class="tempr">${data.main.temp} ℃ / ${data.name} </h2>
             <h6"> ${data.weather[0].main}/${data.weather[0].description} </h6>
             <h6> Humidity ${data.main.humidity} </h6>
-            <p class="india"> Country ${data.sys.country}</p>
+            <h6 class="india"> Country ${data.sys.country}</h6>
         </div>
     `
 }

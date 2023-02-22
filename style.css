@@ -59,10 +59,7 @@ main {
 
 .sameline {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-.icons {
-    display: flex;
-    align-items: start;
-}
+.icons {}
