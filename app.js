@@ -18,13 +18,13 @@ const showWeather = (data) => {
     }
     weather.innerHTML = `
         <div>
-        <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="">
+        <img class="icons" src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="">
         </div>
         <div>
             <h2 class="tempr">${data.main.temp} ℃ / ${data.name} </h2>
             <h6"> ${data.weather[0].main}/${data.weather[0].description} </h6>
             <h6> Humidity ${data.main.humidity} </h6>
-            <p> </p>
+            <p class="india"> Country ${data.sys.country}</p>
         </div>
     `
 }
@@ -37,3 +37,5 @@ form.addEventListener(
     }
     
 )
+
+// https://api.openweathermap.org/data/2.5/weather?q=delhi&appid=8ae8f397b516b102e2fb4ba9223e1067&units=metric&lang=hi
