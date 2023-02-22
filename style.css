@@ -61,9 +61,3 @@ main {
     display: flex;
     flex-direction: column;
 }
-
-.icons {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-}

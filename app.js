@@ -17,7 +17,7 @@ const showWeather = (data) => {
         return;
     }
     weather.innerHTML = `
-        <div class="icons">
+        <div>
         <img  src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="">
         </div>
         <div>
@@ -37,5 +37,3 @@ form.addEventListener(
     }
     
 )
-
-// https://api.openweathermap.org/data/2.5/weather?q=delhi&appid=8ae8f397b516b102e2fb4ba9223e1067&units=metric&lang=hi
